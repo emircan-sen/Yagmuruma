@@ -368,19 +368,27 @@ button {
   content: "";
   position: absolute;
   inset: -14px;
-  border-radius: 50% 50% 48% 48%;
   background: linear-gradient(160deg, var(--pink), var(--purple));
   filter: blur(2px);
-  clip-path: path("M150,300 C40,220 0,150 0,90 C0,35 45,0 90,0 C120,0 142,15 150,42 C158,15 180,0 210,0 C255,0 300,35 300,90 C300,150 260,220 150,300 Z");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20300%20300%27%3E%3Cpath%20d%3D%27M150%2C300%20C40%2C220%200%2C150%200%2C90%20C0%2C35%2045%2C0%2090%2C0%20C120%2C0%20142%2C15%20150%2C42%20C158%2C15%20180%2C0%20210%2C0%20C255%2C0%20300%2C35%20300%2C90%20C300%2C150%20260%2C220%20150%2C300%20Z%27/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20300%20300%27%3E%3Cpath%20d%3D%27M150%2C300%20C40%2C220%200%2C150%200%2C90%20C0%2C35%2045%2C0%2090%2C0%20C120%2C0%20142%2C15%20150%2C42%20C158%2C15%20180%2C0%20210%2C0%20C255%2C0%20300%2C35%20300%2C90%20C300%2C150%20260%2C220%20150%2C300%20Z%27/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .photo-frame-inner {
   position: absolute;
   inset: 0;
-  border-radius: 50% 50% 48% 48%;
   overflow: hidden;
   background: #1a0d20;
-  clip-path: path("M150,300 C40,220 0,150 0,90 C0,35 45,0 90,0 C120,0 142,15 150,42 C158,15 180,0 210,0 C255,0 300,35 300,90 C300,150 260,220 150,300 Z");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20300%20300%27%3E%3Cpath%20d%3D%27M150%2C300%20C40%2C220%200%2C150%200%2C90%20C0%2C35%2045%2C0%2090%2C0%20C120%2C0%20142%2C15%20150%2C42%20C158%2C15%20180%2C0%20210%2C0%20C255%2C0%20300%2C35%20300%2C90%20C300%2C150%20260%2C220%20150%2C300%20Z%27/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20300%20300%27%3E%3Cpath%20d%3D%27M150%2C300%20C40%2C220%200%2C150%200%2C90%20C0%2C35%2045%2C0%2090%2C0%20C120%2C0%20142%2C15%20150%2C42%20C158%2C15%20180%2C0%20210%2C0%20C255%2C0%20300%2C35%20300%2C90%20C300%2C150%20260%2C220%20150%2C300%20Z%27/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .photo-frame-inner img {
