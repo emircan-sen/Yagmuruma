@@ -429,7 +429,7 @@ button {
   text-align: center;
   opacity: 0;
   flex-shrink: 0;
-  animation: messageReveal 1000ms 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: photoCaptionReveal 1000ms 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .photo-caption-line {
@@ -483,6 +483,23 @@ button {
 @keyframes photoIn {
   0% { opacity: 0; transform: scale(0.6) rotate(-6deg); }
   100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes photoCaptionReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 .intro-center {
