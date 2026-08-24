@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#07040b" />
+  <meta name="description" content="Yağmur için hazırlanmış küçük bir aşk animasyonu." />
+  <title>I Love You Yağmur 💗</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" aria-live="polite">
+    <section id="intro" class="scene scene-intro is-active" aria-label="Aşk yağmuru">
+      <div id="love-rain" class="love-rain" aria-hidden="true"></div>
+      <div class="intro-glow intro-glow-a"></div>
+      <div class="intro-glow intro-glow-b"></div>
+
+      <div class="intro-center">
+        <div class="tiny-heart">♥</div>
+        <p class="intro-subtitle">senin için...</p>
+        <div id="countdown" class="countdown" aria-label="Geri sayım"></div>
+      </div>
+    </section>
+
+    <section id="main-scene" class="scene scene-main" aria-label="I Love You Yağmur">
+      <div id="particle-field" class="particle-field" aria-hidden="true"></div>
+
+      <div class="ambient ambient-1"></div>
+      <div class="ambient ambient-2"></div>
+      <div class="ambient ambient-3"></div>
+
+      <div class="top-love-stream" aria-hidden="true">
+        <span>LOVE</span><span>YOU</span><span>LOVE</span><span>YAĞMUR</span><span>LOVE</span>
+      </div>
+
+      <div class="heart-stage">
+        <div class="heart-aura"></div>
+        <div id="heart-particles" class="heart-particles" aria-hidden="true"></div>
+        <div class="heart-message">
+          <div class="message-line">I Love <span class="message-heart">♥</span> You</div>
+          <div class="message-sayang">Yağmur</div>
+        </div>
+      </div>
+
+      <div class="chick chick-left chick-a" aria-hidden="true">
+        <div class="chick-shadow"></div>
+        <div class="chick-body"></div>
+        <div class="chick-wing chick-wing-left"></div>
+        <div class="chick-wing chick-wing-right"></div>
+        <div class="chick-eye chick-eye-left"></div>
+        <div class="chick-eye chick-eye-right"></div>
+        <div class="chick-beak"></div>
+        <div class="chick-feet">
+          <i></i><i></i>
+        </div>
+      </div>
+
+      <div class="chick chick-right chick-b" aria-hidden="true">
+        <div class="chick-shadow"></div>
+        <div class="chick-body"></div>
+        <div class="chick-wing chick-wing-left"></div>
+        <div class="chick-wing chick-wing-right"></div>
+        <div class="chick-eye chick-eye-left"></div>
+        <div class="chick-eye chick-eye-right"></div>
+        <div class="chick-beak"></div>
+        <div class="chick-feet">
+          <i></i><i></i>
+        </div>
+      </div>
+
+      <div class="floating-note note-1">♡</div>
+      <div class="floating-note note-2">♥</div>
+      <div class="floating-note note-3">♡</div>
+      <div class="floating-note note-4">♥</div>
+
+      <div class="tap-hint" id="tap-hint">ekrana dokun 💗</div>
+      <button id="continue-btn" class="continue-btn" type="button">
+        <span>devam et</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button id="replay" class="replay" type="button">Baştan oynat ↻</button>
+    </section>
+
+    <section id="question-scene" class="scene scene-question" aria-label="Son soru">
+      <div id="particle-field-q" class="particle-field" aria-hidden="true"></div>
+      <div class="ambient ambient-1"></div>
+      <div class="ambient ambient-3"></div>
+
+      <div class="question-center">
+        <p class="question-eyebrow">son soru</p>
+        <h2 class="question-title">Beni <span class="q-heart">♥</span> seviyor musun?</h2>
+
+        <div class="answer-wrap" id="answer-wrap">
+          <button id="btn-evet" class="btn-answer btn-evet" type="button">Evet</button>
+          <button id="btn-hayir" class="btn-answer btn-hayir" type="button">Hayır</button>
+        </div>
+
+        <p class="question-hint" id="question-hint">cevabını bekliyorum...</p>
+      </div>
+    </section>
+
+    <div id="evet-overlay" class="evet-overlay" aria-hidden="true">
+      <div class="evet-overlay-glow"></div>
+      <button id="evet-giant" class="evet-giant" type="button">EVET</button>
+    </div>
+
+    <section id="photo-scene" class="scene scene-photo" aria-label="Fotoğraf sahnesi">
+      <div class="photo-glow"></div>
+      <div id="photo-confetti" class="photo-confetti" aria-hidden="true"></div>
+
+      <div class="photo-frame">
+        <div class="photo-frame-inner">
+          <img id="couple-photo" src="photo.jpg" alt="Bizim fotoğrafımız"
+               onerror="this.onerror=null;this.style.display='none';document.getElementById('photo-fallback').style.display='flex';" />
+          <div id="photo-fallback" class="photo-fallback">
+            <span class="photo-fallback-heart">♥</span>
+            <span class="photo-fallback-text">fotoğrafını<br />buraya ekle</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-caption">
+        <p class="photo-caption-line">Biliyordum <span class="message-heart">♥</span></p>
+        <p class="photo-caption-sub">Seni sonsuza kadar seveceğim AŞKIM BALIM BEBEĞİMM.</p>
+      </div>
+
+      <button id="replay-2" class="replay replay-photo" type="button">Baştan oynat ↻</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
