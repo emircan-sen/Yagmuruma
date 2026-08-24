@@ -54,7 +54,7 @@
     loveRain.innerHTML = "";
 
     const count = window.innerWidth < 600 ? 56 : 92;
-    const words = ["LOVE", "LOVE", "♡", "I LOVE YOU", "LOVE", "♥"];
+    const words = ["SEVİYORUM", "SEVİYORUM", "♡", "SENİ SEVİYORUM", "SEVİYORUM", "♥"];
 
     for (let i = 0; i < count; i += 1) {
       const item = document.createElement("span");
@@ -292,7 +292,7 @@
     wait(2900, () => {
       countdown.classList.remove("pop");
       countdown.classList.add("done");
-      countdown.textContent = "I LOVE YOU";
+      countdown.textContent = "SENİ SEVİYORUM";
     });
 
     wait(3650, showMainScene);
