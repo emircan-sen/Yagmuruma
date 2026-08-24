@@ -313,8 +313,10 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 4vh, 32px);
-  padding: 24px;
+  gap: clamp(12px, 2.6vh, 32px);
+  padding: 20px 20px calc(20px + env(safe-area-inset-bottom));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scene-photo.is-visible {
@@ -353,11 +355,13 @@ button {
 
 .photo-frame {
   position: relative;
-  width: min(72vw, 300px);
+  width: min(58vw, 300px);
+  max-height: 40vh;
   aspect-ratio: 0.86;
   opacity: 0;
   transform: scale(0.6) rotate(-6deg);
   animation: photoIn 850ms 150ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  flex-shrink: 0;
 }
 
 .photo-frame::before {
@@ -412,8 +416,11 @@ button {
 
 .photo-caption {
   position: relative;
+  width: 100%;
+  max-width: 90vw;
   text-align: center;
   opacity: 0;
+  flex-shrink: 0;
   animation: messageReveal 1000ms 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -421,9 +428,10 @@ button {
   margin: 0 0 6px;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   font-weight: 800;
-  font-size: clamp(24px, 6vw, 38px);
+  font-size: clamp(22px, 6vw, 38px);
   color: #ffd3ec;
   text-shadow: 0 0 14px rgba(255, 118, 195, 0.7), 0 0 32px rgba(255, 72, 177, 0.4);
+  overflow-wrap: break-word;
 }
 
 .photo-caption-sub {
@@ -439,6 +447,8 @@ button {
   bottom: auto;
   transform: none;
   opacity: 0;
+  flex-shrink: 0;
+  margin-top: 2px;
   animation: replayIn 800ms 1400ms ease forwards;
 }
 
@@ -1021,6 +1031,15 @@ button {
 
   .evet-giant {
     font-size: min(46vw, 40vh);
+  }
+
+  .photo-frame {
+    width: min(50vw, 220px);
+    max-height: 32vh;
+  }
+
+  .photo-caption-sub {
+    font-size: clamp(12px, 3.6vw, 15px);
   }
 }
 
